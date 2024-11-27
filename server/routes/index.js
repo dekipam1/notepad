@@ -73,10 +73,10 @@ router.get('/register', (req, res) => {
           await newUser.save();
           
           req.flash('success_msg', 'You are now registered and can log in');
-          res.redirect('/dashboard');
+          res.redirect('/login');
         } catch (err) {
           console.log(err);
-          res.redirect('/login');
+          res.redirect('/register');
         }
       });
 
